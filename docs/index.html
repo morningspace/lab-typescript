@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>TypeScript in a Nutshell</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+              <section data-markdown>
+                ## TypeScript in a Nutshell
+                by Mo Ying
+
+                Aug, 2018
+              </section>
+            </section>
+            <section>
+              <section data-markdown>
+                ## Why
+              </section>
+              <section data-markdown>
+                ## Industry
+                * [Google wrote Angular2 in TypeScript to replace AtScript](https://techcrunch.com/2015/03/05/microsoft-and-google-collaborate-on-typescript-hell-has-not-frozen-over-yet/)
+                * [LoopBack next is written in TypeScript](https://loopback.io/doc/en/lb4/FAQ.html#why-typescript)
+                * [Dojo2 is totally rewritten from JavaScript to TypeScript](https://dojo.io/docs/fundamentals/typescript_and_dojo_2/index.html)
+                * [Slack spent 6 months to rewrite JS app by TypeScript](https://www.infoq.com/news/2017/04/going-typescript-slack)
+                * [TypeScript support in Babel 7](http://artsy.github.io/blog/2017/11/27/Babel-7-and-TypeScript/): 
+                  * TypeScript as type checker
+                  * Babel as emitter
+                * [Webpack add TypeScript type check into its code](https://github.com/webpack/webpack/pull/6862)
+                * [Visual Studio Code is written entirely in TypeScript](https://www.quora.com/What-is-Visual-Studio-Code-written-in)
+                  * Dogfooding
+                * ...
+              </section>
+              <section data-markdown>
+                ## Popular
+                * npm-stat: [Download statistics for package typescript](https://npm-stat.com/charts.html?package=typescript&from=2015-07-01&to=2018-07-31)
+                * GitHub: [The watch, star, fork #](https://github.com/Microsoft/TypeScript)
+                * Stackoverflow: [Top most loved programming languages](https://insights.stackoverflow.com/survey/2018/#technology-most-popular-technologies-professional-developers)
+                * RedMonk: [Programming language rankings](https://redmonk.com/sogrady/2018/03/07/language-rankings-1-18/)
+              </section>
+              <section data-markdown>
+                ## Active
+                * Move fast
+                  * Usually one release per one or two months
+                  * See [Roadmap](https://github.com/Microsoft/TypeScript/wiki/Roadmap)
+                * High quality
+                  * PR accepted after 55000 tests passed
+                  * High quality nightly builds
+              </section>
+            </section>
+            <section>
+              <section data-markdown>
+                ## What
+              </section>
+              <section data-markdown>
+                ## Definition
+                * *A typed superset of JavaScript that compiles to plain JavaScript* —— [typescriptlang.org](www.typescriptlang.org)
+                * *It starts and ends with JavaScript* —— [dojo.io](https://dojo.io/docs/fundamentals/typescript_and_dojo_2/index.html)
+                * ...
+              </section>
+              <section data-markdown>
+                ## Benefits
+                * Great tools enabled by static types
+                  * Auto-completion
+                  * Static code analysis
+                  * Refactoring support by tools
+                * Features from the future, today!
+              </section>
+              <section data-markdown>
+                ## ES6/7, optional typing and more
+              </section>
+              <section data-markdown>
+                ## ES6/7
+                The standardized specification for the JavaScript language
+                * [let, const, deconstructing](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
+                * [Rest/optional/default parameters, and arrow functions](https://www.typescriptlang.org/docs/handbook/functions.html)
+                * [Class](https://www.typescriptlang.org/docs/handbook/classes.html)
+                * [Symbol](https://www.typescriptlang.org/docs/handbook/symbols.html)
+                * [Modules, import/export](https://www.typescriptlang.org/docs/handbook/modules.html)
+                * [Decorator](https://www.typescriptlang.org/docs/handbook/decorators.html)
+                * [await/async](https://blogs.msdn.microsoft.com/typescript/2015/11/03/what-about-asyncawait/)
+                * ...
+              </section>
+              <section data-markdown>
+                ## Optional typing
+                * In strictly typed languages, you have to declare everything all the time
+                * In TypeScript, you don’t!
+              </section>
+              <section data-markdown>
+                ## And more
+                Features not in ES6/7
+                * [Interface](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+                * [Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
+                * [Namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html)
+                * [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+                  * Union/Intersection types
+                  * Discriminated unions
+                  * ...
+                * ...
+              </section>
+              <section data-markdown>
+                ## Declaration files
+                * Similar to header file in C/C++
+                * Provide type declaration after the fact (the plain old JavaScript code)
+                * 3000+ type declaration files for most popular JavaScript frameworks collected and wrapped as npm package by open source community
+                  * [GitHub](https://github.com/DefinitelyTyped/DefinitelyTyped)
+                  * [TypeSearch](http://microsoft.github.io/TypeSearch/)
+              </section>
+              <section data-markdown>
+                ## IDE Support
+                * Visual Stuidio Code
+                * Other editors
+                  * [tsserver(Node.js)](https://github.com/Microsoft/TypeScript/wiki/Standalone-Server-%28tsserver%29) + editor plugin
+              </section>
+            </section>
+            <section>
+              <section data-markdown>
+                ## What: Demo
+              </section>
+              <section data-markdown>
+                ## Demo: Basic
+                * Start from a single .js
+                * What happens if rename to .ts while leave everything else unchanged?
+                * What happens if start to add type?
+                  * It starts to help catch bugs
+                * What happens if start to introduce type declaration?
+                  * Thousands of lines of declarations known by heart before
+                * What happens if in watch mode?
+                  * See how tsc transpile to ES5 code
+                * What happens if change target to ES6?
+                  * See how tsc transpile to ES6 code
+              </section>
+              <section data-markdown>
+                ## Demo: Null Check
+                * [One billion dollar mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare) by [Tony Hoare](https://en.wikipedia.org/wiki/Tony_Hoare) from Mircosoft Research at QCon London, 2009
+                * What if turn compiler into strict mode?
+                  * Control flow based type analysis
+                  * Pretty hard to cheat the much much deeper type check
+                * See what TypeScript shows on each if-else branch in strict mode
+                  * TypeScript knows better then you on type inference
+              </section>
+              <section data-markdown>
+                ## Demo: Discriminated Unions
+                * What happens if hover over _shape.kind_ in switch block?
+                * What happens if hover over _shape_ in case block?
+                * What happens if hover over _shape_ after switch block when comment out some case?
+                  * Exhaustiveness checking
+                  * TypeScript can infer type based on context very smartly
+              </section>
+            </section>
+            <section>
+              <section data-markdown>
+                ## How
+              </section>
+              <section data-markdown>
+                ## Basic Use
+                * Create a default tsconfig.json
+                * Include .js files by enabling _allowJs_ option
+                  * In the middle of proceess when convert to TypeScript
+                  * Still want to bundle all JavaScript code into a single file with the output of new TypeScript code
+                * Start to write TypeScript without changing any existing code
+                * Introduce type declarations for dependencies to reduce need of looking up doc frequently
+              </section>
+              <section data-markdown>
+                ## Simple Transformation
+                * Start to transform some JavaScript files into TypeScript files w/o big effort. 
+                * Simple rename .js to .ts
+                * Some tweaks in tsconfig.json as needed to avoid tsc complains.
+              </section>
+              <section data-markdown>
+                ## Deep Transformation
+                * Transform more JavaScript files into TypeScript files
+                * Add more TypeScript features incrementally
+                * Need to fix transpiling errors by modifying source code
+                * Generate type declaration file by your own
+                  * tsc -d
+                  * enable _declaration_ in tsconfig.json
+              </section>
+              <section data-markdown>
+                ## Other topics
+                * Debug TypeScript code
+                  * Visual Studio Code
+                  * Command line
+                * Other ways to define type
+                  * Use JSDoc types annotations in .js
+                  * Use @ts-check comment to enable type check in .js
+              </section>
+              <section data-markdown>
+                ## taskme-ts
+                * A [project](https://github.ibm.com/moyingbj/taskme-ts/) used to demonstrate how to migrate a project from JavaScript to TypeScript step by step.
+                * Each branch represents a certain stage during the migration path.
+                * Check GitHub [Compare changes](https://github.ibm.com/moyingbj/taskme-ts/compare) view to see difference between each two branches.
+              </section>
+            </section>
+            <section>
+              <section data-markdown>
+                ## More
+              </section>
+              <section data-markdown>
+                ## More Materials
+                * [TypeScript web site](https://www.typescriptlang.org)
+                * [TypeScript playground](http://www.typescriptlang.org/play/)
+                * What's new in TypeScript by [_Anders Hejlsberg_](https://en.wikipedia.org/wiki/Anders_Hejlsberg):
+                  * [Build 2017](https://channel9.msdn.com/Events/Build/2017/B8088?ocid=player)
+                  * [Build 2018](https://channel9.msdn.com/Events/Build/2018/BRK2150?ocid=player)
+                * [Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
+                * [Complex typescript definitions made easy](https://www.stevefenton.co.uk/2013/01/complex-typescript-definitions-made-easy/)
+                * [Will TS have a purpose after ES6/ES7 is widely adopted?](https://www.quora.com/Will-TypeScript-have-a-purpose-after-ES6-ES7-is-widely-adopted)
+                * [ECMAScript compatibility table](http://kangax.github.io/compat-table/es6/#typescript2_8)
+              </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+            transition: 'convex',
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>
