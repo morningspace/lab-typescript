@@ -1,0 +1,31 @@
+{
+  "per-file": true,
+  "lines": 90,
+  "statements": 90,
+  "functions": 90,
+  "branches": 90,
+  "reporter": [
+      "cobertura",
+      "lcov",
+      "text"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/server.ts",
+    "lib*"
+  ],
+  "extension": [
+    ".ts"
+  ],
+  "all": true,
+  "check-coverage": true,
+  "report-dir": "tests/reports",
+  "cache": false,
+  "sourceMap": true,
+  "temp-directory": "tests/reports/.nyc_output",
+  "require": [
+      "ts-node/register"
+  ]
+}

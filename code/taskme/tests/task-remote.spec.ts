@@ -19,7 +19,7 @@ describe('Model Task remote methods', () => {
     request.get('/api/tasks')
     .expect(401)
     .end((err) => {
-      if (err) fail(err);
+      if (err) { fail(err); }
       done();
     });
   });
@@ -28,8 +28,7 @@ describe('Model Task remote methods', () => {
     request.get('/api/tasks?access_token=sometoken')
     .expect(200)
     .end((err, res) => {
-      if (err) fail(err);
-      else expect(res.body).toEqual([]);
+      if (err) { fail(err); } else { expect(res.body).toEqual([]); }
       done();
     });
   });
@@ -39,8 +38,7 @@ describe('Model Task remote methods', () => {
     .send(TASK)
     .expect(200)
     .end((err, res) => {
-      if (err) fail(err);
-      else {
+      if (err) { fail(err); } else {
         expect(res.body).toEqual(objectContains(EXPECTED));
         taskId = res.body.id;
       }
@@ -52,8 +50,7 @@ describe('Model Task remote methods', () => {
     request.get('/api/tasks/undone?access_token=sometoken')
     .expect(200)
     .end((err, res) => {
-      if (err) fail(err);
-      else {
+      if (err) { fail(err); } else {
         expect(res.body.length).toEqual(1);
         expect(res.body[0]).toEqual(objectContains(EXPECTED));
       }
@@ -65,8 +62,7 @@ describe('Model Task remote methods', () => {
     request.delete(`/api/tasks/${taskId}?access_token=sometoken`)
     .expect(200)
     .end((err, res) => {
-      if (err) fail(err);
-      else expect(res.body).toEqual({ count: 1 });
+      if (err) { fail(err); } else { expect(res.body).toEqual({ count: 1 }); }
       done();
     });
   });

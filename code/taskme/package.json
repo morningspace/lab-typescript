@@ -1,17 +1,18 @@
 {
   "name": "taskme",
   "version": "1.0.0",
-  "main": "src/server/server.js",
+  "main": "lib/src/server/server.js",
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint .",
-    "lint-fix": "eslint --fix --ext .js src tests",
-    "start": "node .",
+    "build": "tsc --outDir lib && find src -type f -name '*.json' -exec cp {} lib/{} \\;",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'tests/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' 'tests/**/*.ts' --fix",
+    "start": "ts-node src/server/server.ts",
     "start-prod": "cross-env NODE_ENV=production node .",
-    "test": "istanbul cover tests/jasmine-runner.js && istanbul report cobertura",
-    "test-debug": "node debug tests/jasmine-runner.js",
+    "test": "nyc node tests/jasmine-runner.ts",
+    "test-debug": "node inspect -r ts-node/register tests/jasmine-runner.ts",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -31,15 +32,14 @@
     "@types/node": "^10.3.4",
     "@types/jasmine": "^2.8.8",
     "@types/loopback": "^3.2.5",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb-base": "^10.0.1",
-    "eslint-config-loopback": "^8.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "istanbul": "^1.0.0-alpha.2",
     "jasmine": "^2.8.0",
     "jasmine-reporters": "^2.2.0",
     "nsp": "^2.1.0",
-    "supertest": "^3.1.0"
+    "nyc": "^12.0.2",
+    "supertest": "^3.1.0",
+    "ts-node": "^6.1.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
   },
   "repository": {
     "type": "",
