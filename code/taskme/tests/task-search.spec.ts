@@ -1,6 +1,5 @@
 import app from '../src/server/server';
-
-const dsSettings = require('../src/server/datasources.production.json');
+import dsSettings from '../src/server/datasources.production.json';
 
 describe('Model Task search', () => {
   const objectContains = jasmine.objectContaining;

@@ -1,6 +1,5 @@
+import supertest from 'supertest';
 import app from '../src/server/server';
-
-const supertest = require('supertest');
 
 const request = supertest(app);
 
