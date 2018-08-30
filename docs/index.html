@@ -7,6 +7,7 @@
 
     <title>TypeScript in a Nutshell</title>
 
+    <link rel="shortcut icon" href="https://www.typescriptlang.org/assets/images/icons/favicon.ico">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
 
@@ -116,6 +117,7 @@
                 * [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
                   * Union/Intersection types
                   * Discriminated unions
+                  * Literal types
                   * ...
                 * ...
               </section>
@@ -139,7 +141,7 @@
                 ## What: Demo
               </section>
               <section data-markdown>
-                ## Demo: Basic
+                ## Demo: [Basic](../code/demos/basic)
                 * Start from a single .js
                 * What happens if rename to .ts while leave everything else unchanged?
                 * What happens if start to add type?
@@ -152,19 +154,23 @@
                   * See how tsc transpile to ES6 code
               </section>
               <section data-markdown>
-                ## Demo: Null Check
+                ## Demo: [Null Check](../code/demos/null-check)
                 * [One billion dollar mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare) by [Tony Hoare](https://en.wikipedia.org/wiki/Tony_Hoare) from Mircosoft Research at QCon London, 2009
                 * What if turn compiler into strict mode?
                   * Control flow based type analysis
                   * Pretty hard to cheat the much much deeper type check
+              </section>
+              <section data-markdown>
+                ## Demo: [Nullable Type Inference](../code/demos/nullable-type-inference)
                 * See what TypeScript shows on each if-else branch in strict mode
                   * TypeScript knows better then you on type inference
               </section>
               <section data-markdown>
-                ## Demo: Discriminated Unions
-                * What happens if hover over _shape.kind_ in switch block?
-                * What happens if hover over _shape_ in case block?
-                * What happens if hover over _shape_ after switch block when comment out some case?
+                ## Demo: [Discriminated Unions](../code/demos/discriminated-unions)
+                * What happens if hover over _shape.kind_ in switch expression?
+                * What happens if hover over _shape_ in each case block?
+                * What happens if hover over _shape_ after switch block while comment out some case?
+                * What happens if hover over _shape_ after switch block?
                   * Exhaustiveness checking
                   * TypeScript can infer type based on context very smartly
               </section>
@@ -177,7 +183,7 @@
                 ## Basic Use
                 * Create a default tsconfig.json
                 * Include .js files by enabling _allowJs_ option
-                  * In the middle of proceess when convert to TypeScript
+                  * In the middle of process when convert to TypeScript
                   * Still want to bundle all JavaScript code into a single file with the output of new TypeScript code
                 * Start to write TypeScript without changing any existing code
                 * Introduce type declarations for dependencies to reduce need of looking up doc frequently
@@ -192,7 +198,7 @@
                 ## Deep Transformation
                 * Transform more JavaScript files into TypeScript files
                 * Add more TypeScript features incrementally
-                * Need to fix transpiling errors by modifying source code
+                * Fix transpiling errors by modifying source code or tweakling tsconfig.json
                 * Generate type declaration file by your own
                   * tsc -d
                   * enable _declaration_ in tsconfig.json
@@ -202,9 +208,9 @@
                 * Debug TypeScript code
                   * Visual Studio Code
                   * Command line
-                * Other ways to define type
+                * [Other ways](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html) to apply type
                   * Use JSDoc types annotations in .js
-                  * Use @ts-check comment to enable type check in .js
+                  * Use @ts-check comment to enable type check in .js individually
               </section>
               <section data-markdown>
                 ## taskme-ts
