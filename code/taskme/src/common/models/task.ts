@@ -82,7 +82,7 @@ module.exports = (Model) => {
 
       return new Promise((resolve) => {
         collection.find(query).toArray((err, items) => {
-          const tasks = items.map(item => new Task(item));
+          const tasks = items.map((item) => new Task(item));
           resolve(tasks);
         });
       });
