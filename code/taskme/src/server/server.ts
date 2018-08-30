@@ -1,7 +1,7 @@
-const loopback = require('loopback');
-const boot = require('loopback-boot');
+import loopback from 'loopback';
+import boot from 'loopback-boot';
 
-const app = loopback();
+const app = loopback() as any;
 export default app;
 
 app.start = function start() {

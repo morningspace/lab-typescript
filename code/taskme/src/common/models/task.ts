@@ -1,3 +1,11 @@
+interface Query {
+  limit: number;
+  skip: number;
+  where: { state: number };
+  order: string[];
+  fields: object;
+}
+
 module.exports = (Model) => {
   const Task = Model;
   Task.validatesLengthOf('title', {
@@ -38,7 +46,7 @@ module.exports = (Model) => {
       where,
       limit,
       skip,
-    } as any;
+    } as Query;
 
     if (order) {
       query.order = [];
