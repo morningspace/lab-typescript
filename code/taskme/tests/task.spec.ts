@@ -1,4 +1,4 @@
-const app = require('../src/server/server');
+import app from '../src/server/server';
 
 describe('Model Task methods', () => {
   const objectContains = jasmine.objectContaining;

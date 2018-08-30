@@ -38,7 +38,7 @@ module.exports = (Model) => {
       where,
       limit,
       skip,
-    };
+    } as any;
 
     if (order) {
       query.order = [];

@@ -1,9 +1,9 @@
 /* Copyright IBM Corp. 2017  All Rights Reserved.                    */
+import app from '../src/server/server';
 
 const path = require('path');
 const Jasmine = require('jasmine');
 const reporters = require('jasmine-reporters');
-const app = require('../src/server/server');
 
 const junitReporter = new reporters.JUnitXmlReporter({
   savePath: path.resolve(__dirname, 'reports/unit/'),
