@@ -4,9 +4,6 @@
     "tslint:recommended"
   ],
   "rules": {
-    "import-name": false,
-    "strict-boolean-expressions": false,
-    "variable-name": [true, "allow-pascal-case"],
     "quotemark": [true, "single"],
     "no-empty": [true, "allow-empty-functions"],
     "interface-name": false,
