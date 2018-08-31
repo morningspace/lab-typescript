@@ -6,23 +6,23 @@ There are a few branches from tsify-original to ts-misc, where each branch repre
 
 ## Branches
 
-### branch: tsify-original
+### Branch: tsify-original
 
 The very beginning stage. No TypeScript at all.
 
-### branch: tsify-basic-use
+### Branch: tsify-basic-use
 
 This is the basic use of TypeScript. You can start to write TypeScript without changing any of your existing code. By adding type declaration files of project dependencies, you can enjoy auto-completion and code navigation when you call your dependencies. You can also get early benefits by trying to enable a few options in tsconfig.json, e.g. noImplicitReturns, noFallthroughCasesInSwitch, etc.
 
-### branch: tsify-simple-trans
+### Branch: tsify-simple-trans
 
 Start to transform some JavaScript src files into TypeScript src files w/o big effort. Just simple rename and probably some tweaks in tsconfig.json to avoid tsc complains.
 
-### branch: tsify-deep-trans
+### Branch: tsify-deep-trans
 
 Transform more JavaScript src files into TypeScript src files, add more TypeScript features incrementally, and use TypeScript more deeply. It normally requires some adjustments in the source code and tweaks in tsconfig.json.
 
-### branch: tsify-misc
+### Branch: tsify-misc
 
 Complete migration to TypeScript project, add tslint for lint check, nyc for code coverage, debug settings in vscode for TypeScript debugging, etc.
 
