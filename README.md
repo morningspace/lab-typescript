@@ -16,7 +16,7 @@ The project `TaskMe` is a very simple task management API service built by [Loop
 
 Please check the below instructions to learn how to play with it.
 
-You can also find the online slides [here](https://morningspace.github.io/understanding-typescript), where it discussed:
+You can also find the online slides [here](https://morningspace.github.io/lab-typescript), where it discussed:
 * Why TypeScript is so popular?
 * What is TypeScript? (by a few [demos](https://github.com/morningspace/lab-typescript/tree/master/code/demos))
 * How to tsify?
