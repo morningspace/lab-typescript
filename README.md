@@ -21,7 +21,7 @@ You can also find the online slides [here](https://morningspace.github.io/lab-ty
 * What is TypeScript? (by a few [demos](https://github.com/morningspace/lab-typescript/tree/master/code/demos))
 * How to tsify?
 
-And the [video series](http://v.youku.com/v_show/id_XMzg0ODc2NTEwNA==.html) recorded for the slides.
+And the [video series](http://list.youku.com/albumlist/show/id_51919965.html) recorded for the slides.
 
 For more lab projects from MorningSpace Lab, please check [morningspace.github.io](https://morningspace.github.io).
 
