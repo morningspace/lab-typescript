@@ -1,8 +1,8 @@
 ## MorningSpace Lab 
 
-晴耕实验室
+[晴耕实验室](https://morningspace.github.io/lab)
 
-[![晴耕小筑](https://morningspace.github.io/assets/images/banner.jpg)](https://morningspace.github.io)
+[![晴耕小筑](https://morningspace.github.io/assets/images/banner.jpg)](https://morningspace.github.io/lab)
 
 # The Path to TypeScript
 
